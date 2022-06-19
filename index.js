@@ -1,13 +1,12 @@
-function mudarImagem() {
-    var text = window.document.getElementById('texto');
-    text.style.fontSize = '30px';
-    text.innerText = "OLHA QUE MARAVILHOSA!!";
-    text.style.transition = "all 1.7s";
-    var imagem = window.document.getElementById('imagem');
-    imagem.src = "troca2.png";
-    imagem.style.border = "2px solid black"
-    var cor = window.document.getElementById('container');
-    cor.style.backgroundColor = 'rgb(121, 6, 17)';
-    cor.style.transition = "all 1.7s";
-
+var botao = document.getElementById('clique');
+botao.onclick = function(){
+    if(botao.value === 'troca'){
+        pers1.src = 'troca2.png';
+        botao.value = 'Retornar';
+        botao.innerHTML = '(Voltar)';
+    }else{
+        pers1.src = 'troca1.jpg';
+        botao.value = 'troca';
+        botao.innerHTML = '(Trocar)';
+    }
 }
